@@ -1,0 +1,29 @@
+name: <MT_TRANS phrase="TinyMCE Custom Field">
+id: TinyMCEField
+author_link: http://www.ideamans.com/
+author_name: Kunihiko Miyanaga - ideaman's Inc.
+description: <MT_TRANS phrase="Adds TinyMCE rich text to customfield types.">
+version: 0.50
+
+tags:
+    function:
+        app:LoadTinyMCEScriptsSafety: $TinyMCEField::MT::TinyMCEField::Tags::hdlr_LoadTinyMCEScriptsSafety
+
+customfield_types:
+    richtext:
+        label: 'TinyMCE Rich Text'
+        field_html:
+            default: |
+                <mtapp:LoadTinyMCEScriptsSafety>
+                <div class="tinymce-field-container">
+                <textarea name="<mt:var name="field_name" escape="html">" id="<mt:var name="field_id">" class="text high tinymce-field"><mt:var name="field_value" escape="html"></textarea>
+                </div>
+
+        column_def: vclob
+        order: 250
+
+l10n_lexicon:
+    ja:
+        'TinyMCE Custom Field': 'TinyMCEカスタムフィールド'
+        'TinyMCE Rich Text': 'TinyMCEリッチテキスト'
+        'Adds TinyMCE rich text to customfield types.': 'カスタムフィールドの種類にTinyMCEによるリッチテキストを追加します。'
