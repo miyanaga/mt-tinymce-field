@@ -24,6 +24,6 @@ customfield_types:
 
 l10n_lexicon:
     ja:
-        'TinyMCE Custom Field': 'TinyMCEカスタムフィールド'
-        'TinyMCE Rich Text': 'TinyMCEリッチテキスト'
-        'Adds TinyMCE rich text to customfield types.': 'カスタムフィールドの種類にTinyMCEによるリッチテキストを追加します。'
+        TinyMCE Custom Field: TinyMCEカスタムフィールド
+        TinyMCE Rich Text: TinyMCEリッチテキスト
+        Adds TinyMCE rich text to customfield types.: カスタムフィールドの種類にTinyMCEによるリッチテキストを追加します。
