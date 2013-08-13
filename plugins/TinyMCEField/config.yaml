@@ -3,7 +3,7 @@ id: TinyMCEField
 author_link: http://www.ideamans.com/
 author_name: Kunihiko Miyanaga - ideaman's Inc.
 description: <MT_TRANS phrase="Adds TinyMCE rich text to customfield types.">
-version: 0.50
+version: 0.60
 
 tags:
     function:
@@ -16,7 +16,8 @@ customfield_types:
             default: |
                 <mtapp:LoadTinyMCEScriptsSafety>
                 <div class="tinymce-field-container">
-                <textarea name="<mt:var name="field_name" escape="html">" id="<mt:var name="field_id">" class="text high tinymce-field"><mt:var name="field_value" escape="html"></textarea>
+                <mt:ignore>FIXME: id replaced because id includes 'customfield' processed in Commercial.pack.</mt:ignore>
+                <textarea name="<mt:var name="field_name" escape="html">" id="<mt:var name="field_id" replace="customfield","richfield">" class="text high tinymce-field"><mt:var name="field_value" escape="html"></textarea>
                 </div>
 
         column_def: vclob
