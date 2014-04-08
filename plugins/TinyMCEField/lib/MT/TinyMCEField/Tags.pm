@@ -8,6 +8,8 @@ use MT::App::CMS;
 
 sub hdlr_LoadTinyMCEScriptsSafety {
     my ( $ctx, $args ) = @_;
+    my $app = MT->instance();
+    my $_type = $app->param('_type');
 
     # Loading only once
     return '' if MT->request->cache('__tinymcescripts');
@@ -65,6 +67,11 @@ jQuery(function($) {
 });
 </script>
 JS
+
+    # Add Blog ID Data
+    if ($_type eq 'category' or $_type eq 'folder') {
+        $out .= q{<input type="hidden" name="blog_id" value="<$mt:BlogID$>" id="blog-id" />};
+    }
 
     # Mark as loaded in this context
     MT->request->cache('__tinymcescripts', 1);
